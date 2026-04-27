@@ -51,7 +51,7 @@ export default function App() {
           <span className="font-bold text-white tracking-wide">InfoMed</span>
           <span className="text-cyan-400 font-mono text-xs tracking-widest">3D</span>
           <span className="hidden sm:block text-slate-700 text-xs mx-1">|</span>
-          <span className="hidden sm:block text-xs text-slate-500">Human Anatomy Explorer</span>
+          <span className="hidden sm:block text-xs text-slate-500">Explorator Anatomie Umană</span>
         </div>
 
         <div className="flex items-center gap-3">
@@ -66,7 +66,7 @@ export default function App() {
                     : 'text-slate-500 hover:text-slate-300 hover:bg-white/6'
                 }`}
               >
-                {s === 'hero' ? 'Explorer' : s === 'glossary' ? 'Glossary' : 'Quiz'}
+                {s === 'hero' ? 'Explorator' : s === 'glossary' ? 'Glosar' : 'Quiz'}
               </button>
             ))}
           </nav>
@@ -117,7 +117,7 @@ export default function App() {
               onClick={() => glossaryRef.current?.scrollIntoView({ behavior: 'smooth' })}
               className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-1 text-slate-600 hover:text-slate-400 transition-colors"
             >
-              <span className="text-xs font-mono tracking-widest">SCROLL</span>
+              <span className="text-xs font-mono tracking-widest">DERULEAZĂ</span>
               <ChevronDown size={14} />
             </motion.button>
           </section>
@@ -138,7 +138,7 @@ export default function App() {
               <Activity size={14} className="text-cyan-500" />
               <span className="text-sm font-bold text-slate-400">InfoMed-3D</span>
             </div>
-            <p className="text-xs text-slate-700">Interactive 3D Medical Education Platform · Built for competition</p>
+            <p className="text-xs text-slate-700">Platformă Interactivă 3D de Educație Medicală · Dezvoltată pentru competiție</p>
           </footer>
         </div>
       </div>

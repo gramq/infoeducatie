@@ -26,17 +26,17 @@ export default function HeroSection({ selectedBone, onBoneSelect, onClear }: Her
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2 text-xs text-slate-500">
             <MousePointer2 size={12} className="text-cyan-500" />
-            <span>Click a bone to inspect</span>
+            <span>Faceți clic pe un os pentru inspecție</span>
           </div>
           <div className="w-px h-3 bg-slate-700" />
           <div className="flex items-center gap-2 text-xs text-slate-500">
             <RotateCcw size={12} className="text-cyan-500" />
-            <span>Drag to orbit</span>
+            <span>Trageți pentru a roti</span>
           </div>
           <div className="w-px h-3 bg-slate-700" />
           <div className="flex items-center gap-2 text-xs text-slate-500">
             <ZoomIn size={12} className="text-cyan-500" />
-            <span>Scroll to zoom</span>
+            <span>Derulați pentru a mări</span>
           </div>
         </div>
 
@@ -48,7 +48,7 @@ export default function HeroSection({ selectedBone, onBoneSelect, onClear }: Her
             className="pointer-events-auto flex items-center gap-1.5 text-xs text-slate-400 hover:text-slate-200 px-2.5 py-1.5 rounded-lg hover:bg-white/8 transition-all"
           >
             <RotateCcw size={11} />
-            Clear selection
+            Ștergeți selecția
           </motion.button>
         )}
       </motion.div>
@@ -69,7 +69,7 @@ export default function HeroSection({ selectedBone, onBoneSelect, onClear }: Her
         >
           <div className="flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/4 border border-white/8 backdrop-blur-sm">
             <Info size={12} className="text-cyan-400" />
-            <span className="text-xs text-slate-400">Interactive 3D Human Skeleton — Select any bone</span>
+            <span className="text-xs text-slate-400">Schelet Uman 3D Interactiv — Selectați un os</span>
           </div>
         </motion.div>
       )}

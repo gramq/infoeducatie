@@ -44,16 +44,16 @@ export default function GlossarySection() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-500/25 bg-cyan-500/5 mb-4">
             <BookOpen size={13} className="text-cyan-400" />
-            <span className="text-xs text-cyan-400 font-mono tracking-widest uppercase">Reference</span>
+            <span className="text-xs text-cyan-400 font-mono tracking-widest uppercase">Referințe</span>
           </div>
           <h2 className="text-4xl font-bold text-white mb-3">
-            Medical{' '}
+            Glosar{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              Glossary
+              Medical
             </span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto text-sm leading-relaxed">
-            Comprehensive medical terminology for orthopedics, trauma, and musculoskeletal medicine.
+            Terminologie medicală cuprinzătoare pentru ortopedie, traumatologie și medicină musculoscheletală.
           </p>
         </motion.div>
 
@@ -69,7 +69,7 @@ export default function GlossarySection() {
             <Search size={16} className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-500" />
             <input
               type="text"
-              placeholder="Search terms or definitions..."
+              placeholder="Căutați termeni sau definiții..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="w-full pl-11 pr-4 py-3 bg-white/5 border border-white/10 rounded-xl text-sm text-slate-200 placeholder:text-slate-600 focus:outline-none focus:border-cyan-500/50 focus:bg-white/8 transition-all"
@@ -96,7 +96,7 @@ export default function GlossarySection() {
 
         {/* Count */}
         <p className="text-xs text-slate-600 mb-4 font-mono">
-          {filtered.length} of {glossaryData.length} terms
+          {filtered.length} din {glossaryData.length} termeni
         </p>
 
         {/* Terms grid */}
@@ -157,7 +157,7 @@ export default function GlossarySection() {
 
           {filtered.length === 0 && (
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-16 text-slate-600">
-              No terms found matching your search.
+              Nu s-au găsit termeni care să corespundă căutării dvs.
             </motion.div>
           )}
         </div>

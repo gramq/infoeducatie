@@ -90,7 +90,7 @@ export default function DiagnosisPanel({ bone, onClose }: DiagnosisPanelProps) {
               >
                 <div className="flex items-center gap-2 mb-2">
                   <Info size={14} className="text-cyan-400" />
-                  <p className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Overview</p>
+                  <p className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">Prezentare Generală</p>
                 </div>
                 <p className="text-sm text-slate-300 leading-relaxed">{bone.description}</p>
               </motion.div>
@@ -104,7 +104,7 @@ export default function DiagnosisPanel({ bone, onClose }: DiagnosisPanelProps) {
               >
                 <div className="flex items-center gap-2 mb-3">
                   <AlertTriangle size={14} className="text-amber-400" />
-                  <p className="text-xs font-semibold text-amber-400 uppercase tracking-wider">Common Injuries</p>
+                  <p className="text-xs font-semibold text-amber-400 uppercase tracking-wider">Leziuni Frecvente</p>
                 </div>
                 <div className="space-y-2">
                   {bone.commonInjuries.map((injury, i) => {
@@ -142,7 +142,7 @@ export default function DiagnosisPanel({ bone, onClose }: DiagnosisPanelProps) {
                 <div className="flex items-center gap-2 mb-3">
                   <CheckCircle size={14} className="text-emerald-400" />
                   <p className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
-                    Medical Recommendations
+                    Recomandări Medicale
                   </p>
                 </div>
                 <ul className="space-y-2">
@@ -171,7 +171,7 @@ export default function DiagnosisPanel({ bone, onClose }: DiagnosisPanelProps) {
                 <div className="flex items-start gap-2">
                   <Zap size={14} className="text-cyan-400 flex-shrink-0 mt-0.5" />
                   <div>
-                    <p className="text-xs font-semibold text-cyan-400 mb-1">Did you know?</p>
+                    <p className="text-xs font-semibold text-cyan-400 mb-1">Ați știut?</p>
                     <p className="text-xs text-slate-400 leading-relaxed">{bone.funFact}</p>
                   </div>
                 </div>

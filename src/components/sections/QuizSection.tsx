@@ -74,16 +74,16 @@ export default function QuizSection() {
         >
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-500/25 bg-cyan-500/5 mb-4">
             <HelpCircle size={13} className="text-cyan-400" />
-            <span className="text-xs text-cyan-400 font-mono tracking-widest uppercase">Assessment</span>
+            <span className="text-xs text-cyan-400 font-mono tracking-widest uppercase">Evaluare</span>
           </div>
           <h2 className="text-4xl font-bold text-white mb-3">
-            Quick{' '}
+            Test{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-400">
-              Quiz
+              Rapid
             </span>
           </h2>
           <p className="text-slate-400 max-w-xl mx-auto text-sm">
-            Test your knowledge of human anatomy and musculoskeletal medicine.
+            Testați-vă cunoștințele despre anatomia umană și medicina musculoscheletală.
           </p>
         </motion.div>
 
@@ -124,12 +124,12 @@ export default function QuizSection() {
                 </div>
 
                 <h3 className="text-2xl font-bold text-white mb-2">
-                  {pct >= 80 ? 'Excellent Work!' : pct >= 60 ? 'Good Effort!' : 'Keep Studying!'}
+                  {pct >= 80 ? 'Muncă Excelentă!' : pct >= 60 ? 'Efort Bun!' : 'Continuați Studiul!'}
                 </h3>
                 <p className="text-slate-400 mb-2">
-                  You answered{' '}
-                  <span className="text-cyan-300 font-semibold">{score}</span> out of{' '}
-                  <span className="text-cyan-300 font-semibold">{quizData.length}</span> correctly.
+                  Ați răspuns corect la{' '}
+                  <span className="text-cyan-300 font-semibold">{score}</span> din{' '}
+                  <span className="text-cyan-300 font-semibold">{quizData.length}</span> întrebări.
                 </p>
 
                 {/* Per-question review */}
@@ -152,7 +152,7 @@ export default function QuizSection() {
                 className="flex items-center gap-2 mx-auto px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-black font-semibold rounded-xl transition-colors"
               >
                 <RotateCcw size={16} />
-                Try Again
+                Încercați Din Nou
               </motion.button>
             </motion.div>
           ) : (
@@ -167,12 +167,12 @@ export default function QuizSection() {
               {/* Progress */}
               <div className="flex items-center justify-between mb-4">
                 <span className="text-xs text-slate-500 font-mono">
-                  Question {currentIndex + 1} / {quizData.length}
+                  Întrebarea {currentIndex + 1} / {quizData.length}
                 </span>
                 <div className="flex items-center gap-2">
                   <Zap size={12} className="text-cyan-500" />
                   <span className="text-xs text-cyan-400 font-mono">
-                    {score} / {answeredCount} correct
+                    {score} / {answeredCount} corect
                   </span>
                 </div>
               </div>
@@ -263,7 +263,7 @@ export default function QuizSection() {
                         <p className={`text-xs font-semibold ${
                           currentState.state === 'correct' ? 'text-emerald-400' : 'text-red-400'
                         }`}>
-                          {currentState.state === 'correct' ? 'Correct!' : 'Incorrect'}
+                          {currentState.state === 'correct' ? 'Corect!' : 'Incorect'}
                         </p>
                       </div>
                       <p className="text-sm text-slate-400 leading-relaxed">{current.explanation}</p>
@@ -283,9 +283,9 @@ export default function QuizSection() {
                   className="w-full flex items-center justify-center gap-2 py-3 bg-gradient-to-r from-cyan-600 to-blue-600 hover:from-cyan-500 hover:to-blue-500 text-white font-semibold rounded-xl transition-all"
                 >
                   {currentIndex < quizData.length - 1 ? (
-                    <>Next Question <ChevronRight size={16} /></>
+                    <>Întrebarea Următoare <ChevronRight size={16} /></>
                   ) : (
-                    <>View Results <Award size={16} /></>
+                    <>Vizualizați Rezultatele <Award size={16} /></>
                   )}
                 </motion.button>
               )}

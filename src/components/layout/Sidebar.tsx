@@ -9,9 +9,9 @@ interface SidebarProps {
 }
 
 const navItems: { id: NavSection; label: string; icon: React.ComponentType<{ size?: number; className?: string }> }[] = [
-  { id: 'hero', label: 'Skeleton Explorer', icon: Layers },
-  { id: 'glossary', label: 'Medical Glossary', icon: BookOpen },
-  { id: 'quiz', label: 'Quick Quiz', icon: HelpCircle },
+  { id: 'hero', label: 'Explorator Schelet', icon: Layers },
+  { id: 'glossary', label: 'Glosar Medical', icon: BookOpen },
+  { id: 'quiz', label: 'Test Rapid', icon: HelpCircle },
 ];
 
 const boneParts = [
@@ -51,7 +51,7 @@ export default function Sidebar({ activeSection, onNavigate, selectedBone }: Sid
 
       {/* Navigation */}
       <nav className="px-3 pt-5 flex-1 overflow-y-auto scrollbar-hide">
-        <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest px-3 mb-2">Navigation</p>
+        <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest px-3 mb-2">Navigare</p>
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.id;
@@ -88,7 +88,7 @@ export default function Sidebar({ activeSection, onNavigate, selectedBone }: Sid
             className="mt-5"
           >
             <p className="text-xs font-semibold text-slate-500 uppercase tracking-widest px-3 mb-2">
-              Select Bone
+              Selectați Os
             </p>
             {boneParts.map((bone) => (
               <motion.button
@@ -114,9 +114,9 @@ export default function Sidebar({ activeSection, onNavigate, selectedBone }: Sid
       {/* Stats footer */}
       <div className="px-4 py-4 border-t border-cyan-900/30 grid grid-cols-3 gap-2">
         {[
-          { label: 'Bones', value: '206', icon: Layers },
-          { label: 'Joints', value: '360', icon: Zap },
-          { label: 'Muscles', value: '640', icon: Activity },
+          { label: 'Oase', value: '206', icon: Layers },
+          { label: 'Articulații', value: '360', icon: Zap },
+          { label: 'Mușchi', value: '640', icon: Activity },
         ].map((stat) => {
           const Icon = stat.icon;
           return (
